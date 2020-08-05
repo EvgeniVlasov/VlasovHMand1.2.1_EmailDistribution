@@ -1,0 +1,2 @@
+rootProject.name='VlasovHMand1.2.1_EmailDistribution'
+include ':app'
