@@ -8,6 +8,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    EditText editName;
+    EditText editMail;
+    TextView txtComplite;
 
 
     @Override
@@ -19,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickButtonOK(View view) {
-        EditText editName = findViewById(R.id.editName);
-        EditText editMail = findViewById(R.id.editMail);
+        editName = findViewById(R.id.editName);
+        editMail = findViewById(R.id.editMail);
         String name = editName.getText().toString();
         String mail = editMail.getText().toString();
-        TextView txtComplite = findViewById(R.id.txtComplite);
-        txtComplite.setText(null);
+        txtComplite = findViewById(R.id.txtComplite);
+        txtComplite.setText("");
         if (name.isEmpty() || mail.isEmpty()) {
             return;
         }
@@ -33,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickButtonClear(View view) {
-        EditText editName = findViewById(R.id.editName);
-        EditText editMail = findViewById(R.id.editMail);
-        TextView txtComplite = findViewById(R.id.txtComplite);
-        editName.setText(null);
-        editMail.setText(null);
-        txtComplite.setText(null);
+        editName = findViewById(R.id.editName);
+        editMail = findViewById(R.id.editMail);
+        txtComplite = findViewById(R.id.txtComplite);
+        editName.setText("");
+        editMail.setText("");
+        txtComplite.setText("");
     }
 
 }
